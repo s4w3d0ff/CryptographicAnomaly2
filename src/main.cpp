@@ -52,12 +52,12 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 const int64 nChainStartTimeNAdaptive = 1389306217; // Scrypt-N N-Factor start time
-const int64 nHardforkStartTime = 1401580800; // hardfork: switch to Scrypt-N/KGW - June 1st, 2014 00:00:00 GMT.
+//const int64 nHardforkStartTime = 1401580800; // hardfork: switch to Scrypt-N/KGW - June 1st, 2014 00:00:00 GMT.
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
-int64 CTransaction::nMinTxFee = 10000000;
+int64 CTransaction::nMinTxFee = 1000;
 /** Fees smaller than this (in satoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = 10000000;
+int64 CTransaction::nMinRelayTxFee = 1000;
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -1124,6 +1124,10 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
     if (nHeight <= 0 || prevHash <= 0)
         return nFees;
+        
+    if (nHeight == 1)
+        return 92000 * COIN; // Premine for coin swap
+    	
     
     CBigNum nMod = CBigNum(prevHash) % CBigNum(COIN);
 
