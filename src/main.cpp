@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2014 The Spots2 developers
+// Copyright (c) 2014 The CryptographicAnomaly2 developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -36,7 +36,7 @@ unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
 uint256 hashGenesisBlock("0x6406c825fbe732e5208e567446733a838bbd40f7d93f0fd975164ea9259779a2");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Spots2: starting difficulty is 1 / 2^12
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // CryptographicAnomaly2: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
@@ -70,7 +70,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Spots Signed Message:\n";
+const string strMessageMagic = "Cryptographic Anomaly Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -361,7 +361,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // Spots2: IsDust() detection disabled, allows any valid dust to be relayed.
+    // CryptographicAnomaly2: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant. 
     return false;
 }
@@ -625,7 +625,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
             nMinFee = 0;
     }
 
-    // Spots2
+    // CryptographicAnomaly2
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -1081,6 +1081,8 @@ const unsigned char minNfactor = 10;
 const unsigned char maxNfactor = 30;
 
 unsigned char GetNfactor(int64 nTimestamp) {
+    return 9; // Standard Scrypt for now
+    /*
     int l = 0;
 
     if (nTimestamp < nHardforkStartTime)
@@ -1108,30 +1110,7 @@ unsigned char GetNfactor(int64 nTimestamp) {
     //printf("GetNfactor: %d -> %d %d : %d / %d\n", nTimestamp - nChainStartTimeNAdaptive, l, s, n, min(max(N, minNfactor), maxNfactor));
 
     return min(max(N, minNfactor), maxNfactor);
-}
-
-// Spots2 subsidy table
-const static int spa_subsidy[101] = {
-0, 940, 3492, 6069, 8673, 11304, 13963, 16650, 19366, 22112, 24887, 27694, 30532, 33402, 36305, 39241, 42213, 45219, 48262, 51342, 54459, 57616, 60812, 64050, 67329, 70652, 74018, 77430, 80889, 84396, 87952, 91559, 95218, 98930, 102698, 106523, 110407, 114351, 118358, 122429, 126566, 130773, 135051, 139402, 143830, 148336, 152924, 157597, 162358, 167210, 172157, 177203, 182351, 187607, 192974, 198457, 204062, 209794, 215659, 221663, 227813, 234116, 240581, 247215, 254027, 261028, 268229, 275641, 283276, 291149, 299275, 307671, 316355, 325347, 334672, 344353, 354420, 364904, 375841, 387273, 399246, 411814, 425039, 438994, 453765, 469451, 486176, 504084, 523359, 544224, 566966, 591957, 619690, 650844, 686380, 727739, 777208, 838764, 920291, 1041340, 1281967 };
-
-// original function - not used, to prevent trouble porting double precision stuff to other languages, compilers and hardware
-//return (int64)(100./pow(2,((double)n)/(21915.*8.))+.37075);  //the table can be generated from this function (100.=initial reward; 8.=months for halving)
-
-// bin search the lookup table
-inline int64 spa_sub_bin(int nHeight) {
-        int i=0, a=1, b=100;
-        if (nHeight>=spa_subsidy[100]) return 0;
-        while (b>=a)
-        {
-                i = (a+b)>>1; //midpoint
-                if (nHeight<spa_subsidy[i] && nHeight>=spa_subsidy[i-1])
-                        break;
-                else if (spa_subsidy[i] <= nHeight)
-                        a = i+1;
-                else
-                        b = i-1;
-        }
-        return (int64)(101-i);
+    */
 }
 
 int static generateMTRandom(unsigned int s, int range)
@@ -1143,30 +1122,24 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
-    int64 nSubsidy = 49 * COIN;
+    if (nHeight <= 0 || prevHash <= 0)
+        return nFees;
+    
+    CBigNum nMod = CBigNum(prevHash) % CBigNum(COIN);
 
-    if(nHeight < 78999)
-    {
-        std::string cseed_str = prevHash.ToString().substr(8,7);
-		const char* cseed = cseed_str.c_str();
-		long seed = hex2long(cseed);
-
-		int rand = generateMTRandom(seed, 100000);
-
-		if(rand > 50000 && rand < 50011)
-			nSubsidy = 10045 * COIN;
-    }
+    int64 nSubsidy = 0;
+    if (nMod < COIN/4)
+        nSubsidy = 1 * COIN;
     else
-    {
-        nSubsidy = 48 * COIN;
-    }
+        nSubsidy = COIN - nMod.getint();
 
+    printf("nMod: %s nSubsidy: %"PRI64d"\n", nMod.ToString().c_str(), nSubsidy);
+			
     return nSubsidy + nFees;
 }
 
 static const int64 nTargetTimespan = 3 * 60; // 3 minutes
-static const int64 nTargetTimespanNEW = 70; // Spots: every 2 blocks (140 seconds)
-static const int64 nTargetSpacing = 70; // Spots2: 70 seconds
+static const int64 nTargetSpacing = 60; // CryptographicAnomaly2: 60 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
@@ -1184,17 +1157,10 @@ unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
     bnResult.SetCompact(nBase);
     while (nTime > 0 && bnResult < bnProofOfWorkLimit)
     {
-        if (nTime < nHardforkStartTime) { 
-	        // Maximum 200% adjustment...
-        	bnResult *= 2;
-	        // ... in best-case exactly 2-times-normal target time
-        	nTime -= nTargetTimespan*2;
-        } else {
-          // Maximum 10% adjustment...
-          bnResult = (bnResult * 110) / 100;
-          // ... in best-case exactly 4-times-normal target time
-          nTime -= nTargetTimespanNEW*4;
-        }
+      // Maximum 10% adjustment...
+      bnResult = (bnResult * 110) / 100;
+      // ... in best-case exactly 4-times-normal target time
+      nTime -= nTargetTimespan*4;
     }
     if (bnResult > bnProofOfWorkLimit)
         bnResult = bnProofOfWorkLimit;
@@ -1232,7 +1198,7 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
         return pindexLast->nBits;
     }
 
-    // Spots: This fixes an issue where a 51% attack can change difficulty at will.
+    // This fixes an issue where a 51% attack can change difficulty at will.
     // Go back the full period unless it's the first retarget after genesis. Code courtesy of Art Forz
     int blockstogoback = nInterval-1;
     if ((pindexLast->nHeight+1) != nInterval)
@@ -1248,34 +1214,10 @@ unsigned int static GetNextWorkRequired_V1(const CBlockIndex* pindexLast, const 
     int64 nActualTimespan = pindexLast->GetBlockTime() - pindexFirst->GetBlockTime();
     printf("  nActualTimespan = %"PRI64d"  before bounds\n", nActualTimespan);
 
-	if(pindexLast->nHeight+1 > 79000)
-	{
-		if (nActualTimespan < nTargetTimespan/2)
-			nActualTimespan = nTargetTimespan/2;
-		if (nActualTimespan > nTargetTimespan*2)
-			nActualTimespan = nTargetTimespan*2;
-	}
-	else if(pindexLast->nHeight+1 > 10000)
-	{
-		if (nActualTimespan < nTargetTimespan/4)
-			nActualTimespan = nTargetTimespan/4;
-		if (nActualTimespan > nTargetTimespan*4)
-			nActualTimespan = nTargetTimespan*4;
-	}
-	else if(pindexLast->nHeight+1 > 5000)
-	{
-		if (nActualTimespan < nTargetTimespan/8)
-			nActualTimespan = nTargetTimespan/8;
-		if (nActualTimespan > nTargetTimespan*4)
-			nActualTimespan = nTargetTimespan*4;
-	}
-	else 
-	{
-		if (nActualTimespan < nTargetTimespan/16)
-			nActualTimespan = nTargetTimespan/16;
-		if (nActualTimespan > nTargetTimespan*4)
-			nActualTimespan = nTargetTimespan*4;
-	}
+    if (nActualTimespan < nTargetTimespan/2)
+        nActualTimespan = nTargetTimespan/2;
+    if (nActualTimespan > nTargetTimespan*2)
+        nActualTimespan = nTargetTimespan*2;
 
     // Retarget
     CBigNum bnNew;
@@ -1322,13 +1264,13 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
                 else { PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAveragePrev; }
                 PastDifficultyAveragePrev = PastDifficultyAverage;
 
-		if (LatestBlockTime < BlockReading->GetBlockTime()) {
+                if (LatestBlockTime < BlockReading->GetBlockTime()) {
                     LatestBlockTime = BlockReading->GetBlockTime();
-		}
+                }
                 PastRateActualSeconds = LatestBlockTime - BlockReading->GetBlockTime();
                 PastRateTargetSeconds = TargetBlocksSpacingSeconds * PastBlocksMass;
                 PastRateAdjustmentRatio = double(1);
-		if (PastRateActualSeconds < 1) { PastRateActualSeconds = 1; }
+                if (PastRateActualSeconds < 1) { PastRateActualSeconds = 1; }
                 if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0) {
                     PastRateAdjustmentRatio = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
                 }
@@ -1337,7 +1279,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
                 EventHorizonDeviationSlow = 1 / EventHorizonDeviation;
 
                 if (PastBlocksMass >= PastBlocksMin) {
-                        if ((PastRateAdjustmentRatio <= EventHorizonDeviationSlow) || (PastRateAdjustmentRatio >= EventHorizonDeviationFast)) { assert(BlockReading); break; }
+                    if ((PastRateAdjustmentRatio <= EventHorizonDeviationSlow) || (PastRateAdjustmentRatio >= EventHorizonDeviationFast)) { assert(BlockReading); break; }
                 }
                 if (BlockReading->pprev == NULL) { assert(BlockReading); break; }
                 BlockReading = BlockReading->pprev;
@@ -1355,9 +1297,9 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 
 unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-        static const int64 BlocksTargetSpacing = 70; // 70 seconds
+        static const int64 BlocksTargetSpacing = 60; // 70 seconds
         static const unsigned int TimeDaySeconds = 60 * 60 * 24;
-        int64 PastSecondsMin = TimeDaySeconds * 0.01; // 0.25 in megacoin, 0.01 in some others
+        int64 PastSecondsMin = TimeDaySeconds * 0.02; // 0.25 in megacoin, 0.01 in some others
         int64 PastSecondsMax = TimeDaySeconds * 0.14; // 7 days in megacoin, 0.14 in some others
         uint64 PastBlocksMin = PastSecondsMin / BlocksTargetSpacing;
         uint64 PastBlocksMax = PastSecondsMax / BlocksTargetSpacing;
@@ -1372,7 +1314,7 @@ unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const 
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    if (pblock->nTime >= nHardforkStartTime)
+    if (pindexLast->nHeight >= 100)
         return GetNextWorkRequired_V2(pindexLast, pblock); //kgw retarget
     else
         return GetNextWorkRequired_V1(pindexLast, pblock); //original retarget
@@ -2290,7 +2232,7 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // Spots2: Special short-term limits to avoid 10,000 BDB lock limit:
+    // CryptographicAnomaly2: Special short-term limits to avoid 10,000 BDB lock limit:
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -2454,7 +2396,7 @@ bool CBlock::AcceptBlock(CValidationState &state, CDiskBlockPos *dbp)
 
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired, unsigned int nToCheck)
 {
-    // Spots2: temporarily disable v2 block lockin until we are ready for v2 transition
+    // CryptographicAnomaly2: temporarily disable v2 block lockin until we are ready for v2 transition
     return false;
     unsigned int nFound = 0;
     for (unsigned int i = 0; i < nToCheck && nFound < nRequired && pstart != NULL; i++)
@@ -3278,7 +3220,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xfb, 0xc0, 0xb6, 0xdb }; // Spots2
+unsigned char pchMessageStart[4] = { 0x4d, 0x43, 0x41, 0x44 }; // CryptographicAnomaly2
 
 
 void static ProcessGetData(CNode* pfrom)
@@ -3446,12 +3388,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         uint64 nNonce = 1;
         vRecv >> pfrom->nVersion >> pfrom->nServices >> nTime >> addrMe;
 
-	bool badVersion = false;
-        if (pfrom->nVersion < MIN_PEER_PROTO_VERSION)
-        {
-            badVersion = true;
-        }
-        if (pfrom->nVersion < 60201 && GetTime() >= nHardforkStartTime)
+        bool badVersion = false;
+        if (pfrom->nVersion < 60000)
         {
             badVersion = true;
         }
@@ -3462,7 +3400,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         if (badVersion)
         {
             // disconnect from peers older than this proto version
-            printf("partner %s using obsolete version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
+            printf("partner %s using obsolete or too new version %i; disconnecting\n", pfrom->addr.ToString().c_str(), pfrom->nVersion);
             pfrom->fDisconnect = true;
             return false;
         }
@@ -4334,7 +4272,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// Spots2Miner
+// CryptographicAnomaly2Miner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4747,7 +4685,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         return false;
 
     //// debug print
-    printf("Spots2Miner:\n");
+    printf("CryptographicAnomaly2Miner:\n");
     printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4756,7 +4694,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("Spots2Miner : generated block is stale");
+            return error("CryptographicAnomaly2Miner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4770,17 +4708,17 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("Spots2Miner : ProcessBlock, block not accepted");
+            return error("CryptographicAnomaly2Miner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static Spots2Miner(CWallet *pwallet)
+void static CryptographicAnomaly2Miner(CWallet *pwallet)
 {
-    printf("Spots2Miner started\n");
+    printf("CryptographicAnomaly2Miner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("spots2-miner");
+    RenameThread("cryptographicanomaly2-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
@@ -4802,7 +4740,7 @@ void static Spots2Miner(CWallet *pwallet)
         CBlock *pblock = &pblocktemplate->block;
         IncrementExtraNonce(pblock, pindexPrev, nExtraNonce);
 
-        printf("Running Spots2Miner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running CryptographicAnomaly2Miner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4913,7 +4851,7 @@ void static Spots2Miner(CWallet *pwallet)
     } }
     catch (boost::thread_interrupted)
     {
-        printf("Spots2Miner terminated\n");
+        printf("CryptographicAnomaly2Miner terminated\n");
         throw;
     }
 }
@@ -4938,7 +4876,7 @@ void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
 
     minerThreads = new boost::thread_group();
     for (int i = 0; i < nThreads; i++)
-        minerThreads->create_thread(boost::bind(&Spots2Miner, pwallet));
+        minerThreads->create_thread(boost::bind(&CryptographicAnomaly2Miner, pwallet));
 }
 
 // Amount compression:

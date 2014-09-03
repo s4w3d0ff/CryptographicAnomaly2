@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Spots2</source>
-        <translation>O Spots2-u</translation>
+        <source>About CryptographicAnomaly2</source>
+        <translation>O CryptographicAnomaly2-u</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Spots2&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Spots2&lt;/b&gt; verzija</translation>
+        <source>&lt;b&gt;CryptographicAnomaly2&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CryptographicAnomaly2&lt;/b&gt; verzija</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -29,7 +29,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Spots2 developers</source>
+        <source>The CryptographicAnomaly2 developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -62,8 +62,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Spots2 addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Ovo su vaše Spots2 adrese za primanje isplate. Možda želite dati drukčiju adresu svakom primatelju tako da možete pratiti tko je platio.</translation>
+        <source>These are your CryptographicAnomaly2 addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Ovo su vaše CryptographicAnomaly2 adrese za primanje isplate. Možda želite dati drukčiju adresu svakom primatelju tako da možete pratiti tko je platio.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -77,7 +77,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Spots2 address</source>
+        <source>Sign a message to prove you own a CryptographicAnomaly2 address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -102,7 +102,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Spots2 address</source>
+        <source>Verify a message to ensure it was signed with a specified CryptographicAnomaly2 address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -117,7 +117,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Spots2 addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your CryptographicAnomaly2 addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -243,8 +243,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SPOTS&lt;/b&gt;!</source>
-        <translation>Upozorenje: Ako šifrirate vaš novčanik i izgubite lozinku, &lt;b&gt;IZGUBIT ĆETE SVE SVOJE SPOTSE!&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CGA&lt;/b&gt;!</source>
+        <translation>Upozorenje: Ako šifrirate vaš novčanik i izgubite lozinku, &lt;b&gt;IZGUBIT ĆETE SVE SVOJE CGAE!&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -270,8 +270,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Spots2 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your spots2s from being stolen by malware infecting your computer.</source>
-        <translation>Spots2 će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše spots2e od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
+        <source>CryptographicAnomaly2 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cryptographicanomaly2s from being stolen by malware infecting your computer.</source>
+        <translation>CryptographicAnomaly2 će se sada zatvoriti kako bi dovršio postupak šifriranja. Zapamtite da šifriranje vašeg novčanika ne može u potpunosti zaštititi vaše cryptographicanomaly2e od krađe preko zloćudnog softvera koji bi bio na vašem računalu.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -369,8 +369,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Spots2</source>
-        <translation>Prikaži informacije o Spots2u</translation>
+        <source>Show information about CryptographicAnomaly2</source>
+        <translation>Prikaži informacije o CryptographicAnomaly2u</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -414,13 +414,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Spots2 address</source>
-        <translation>Slanje novca na spots2 adresu</translation>
+        <source>Send coins to a CryptographicAnomaly2 address</source>
+        <translation>Slanje novca na cryptographicanomaly2 adresu</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Spots2</source>
-        <translation>Promijeni postavke konfiguracije za spots2</translation>
+        <source>Modify configuration options for CryptographicAnomaly2</source>
+        <translation>Promijeni postavke konfiguracije za cryptographicanomaly2</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -450,8 +450,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Spots2</source>
-        <translation>Spots2</translation>
+        <source>CryptographicAnomaly2</source>
+        <translation>CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -475,8 +475,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Spots2</source>
-        <translation>&amp;O Spots2u</translation>
+        <source>&amp;About CryptographicAnomaly2</source>
+        <translation>&amp;O CryptographicAnomaly2u</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -495,12 +495,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Spots2 addresses to prove you own them</source>
+        <source>Sign messages with your CryptographicAnomaly2 addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Spots2 addresses</source>
+        <source>Verify messages to ensure they were signed with specified CryptographicAnomaly2 addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -531,13 +531,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>Spots2 client</source>
-        <translation>Spots2 klijent</translation>
+        <source>CryptographicAnomaly2 client</source>
+        <translation>CryptographicAnomaly2 klijent</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Spots2 network</source>
-        <translation><numerusform>%n aktivna veza na Spots2 mrežu</numerusform><numerusform>%n aktivne veze na Spots2 mrežu</numerusform><numerusform>%n aktivnih veza na Spots2 mrežu</numerusform></translation>
+        <source>%n active connection(s) to CryptographicAnomaly2 network</source>
+        <translation><numerusform>%n aktivna veza na CryptographicAnomaly2 mrežu</numerusform><numerusform>%n aktivne veze na CryptographicAnomaly2 mrežu</numerusform><numerusform>%n aktivnih veza na CryptographicAnomaly2 mrežu</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -651,7 +651,7 @@ Adresa:%4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Spots2 address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid CryptographicAnomaly2 address or malformed URI parameters.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -666,7 +666,7 @@ Adresa:%4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Spots2 can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. CryptographicAnomaly2 can no longer continue safely and will quit.</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -732,8 +732,8 @@ Adresa:%4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Spots2 address.</source>
-        <translation>Upisana adresa &quot;%1&quot; nije valjana spots2 adresa.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CryptographicAnomaly2 address.</source>
+        <translation>Upisana adresa &quot;%1&quot; nije valjana cryptographicanomaly2 adresa.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -751,7 +751,7 @@ Adresa:%4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Spots2-Qt</source>
+        <source>CryptographicAnomaly2-Qt</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -814,13 +814,13 @@ Adresa:%4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Spots2 after logging in to the system.</source>
-        <translation>Automatski pokreni Spots2 kad se uključi računalo</translation>
+        <source>Automatically start CryptographicAnomaly2 after logging in to the system.</source>
+        <translation>Automatski pokreni CryptographicAnomaly2 kad se uključi računalo</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Spots2 on system login</source>
-        <translation>&amp;Pokreni Spots2 kod pokretanja sustava</translation>
+        <source>&amp;Start CryptographicAnomaly2 on system login</source>
+        <translation>&amp;Pokreni CryptographicAnomaly2 kod pokretanja sustava</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -839,8 +839,8 @@ Adresa:%4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Spots2 client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatski otvori port Spots2 klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
+        <source>Automatically open the CryptographicAnomaly2 client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatski otvori port CryptographicAnomaly2 klijenta na ruteru. To radi samo ako ruter podržava UPnP i ako je omogućen.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -849,7 +849,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Spots2 network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the CryptographicAnomaly2 network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>Spojite se na Bitcon mrežu putem SOCKS proxy-a (npr. kod povezivanja kroz Tor)</translation>
     </message>
     <message>
@@ -924,7 +924,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Spots2.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting CryptographicAnomaly2.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -935,11 +935,11 @@ Adresa:%4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Izaberite željeni najmanji dio spots2a koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
+        <translation>Izaberite željeni najmanji dio cryptographicanomaly2a koji će biti prikazan u sučelju i koji će se koristiti za plaćanje.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Spots2 addresses in the transaction list or not.</source>
+        <source>Whether to show CryptographicAnomaly2 addresses in the transaction list or not.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -991,7 +991,7 @@ Adresa:%4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Spots2.</source>
+        <source>This setting will take effect after restarting CryptographicAnomaly2.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1010,7 +1010,7 @@ Adresa:%4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Spots2 network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CryptographicAnomaly2 network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1064,7 +1064,7 @@ Adresa:%4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start spots2: click-to-pay handler</source>
+        <source>Cannot start cryptographicanomaly2: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1214,7 +1214,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Spots2-Qt help message to get a list with possible Spots2 command-line options.</source>
+        <source>Show the CryptographicAnomaly2-Qt help message to get a list with possible CryptographicAnomaly2 command-line options.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1234,12 +1234,12 @@ Adresa:%4
     </message>
     <message>
         <location line="-104"/>
-        <source>Spots2 - Debug window</source>
+        <source>CryptographicAnomaly2 - Debug window</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+25"/>
-        <source>Spots2 Core</source>
+        <source>CryptographicAnomaly2 Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1249,7 +1249,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Spots2 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the CryptographicAnomaly2 debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1259,7 +1259,7 @@ Adresa:%4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Spots2 RPC console.</source>
+        <source>Welcome to the CryptographicAnomaly2 RPC console.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1443,8 +1443,8 @@ Adresa:%4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Spots2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Unesite Spots2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a CryptographicAnomaly2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Unesite CryptographicAnomaly2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1467,7 +1467,7 @@ Adresa:%4
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Unesite Spots2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <translation>Unesite CryptographicAnomaly2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1508,7 +1508,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Spots2 address</source>
+        <source>Sign the message to prove you own this CryptographicAnomaly2 address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1540,11 +1540,11 @@ Adresa:%4
     <message>
         <location line="+21"/>
         <source>The address the message was signed with (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Unesite Spots2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <translation>Unesite CryptographicAnomaly2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Spots2 address</source>
+        <source>Verify the message to ensure it was signed with the specified CryptographicAnomaly2 address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1560,8 +1560,8 @@ Adresa:%4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Spots2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Unesite Spots2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a CryptographicAnomaly2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Unesite CryptographicAnomaly2 adresu (npr. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1570,7 +1570,7 @@ Adresa:%4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Spots2 signature</source>
+        <source>Enter CryptographicAnomaly2 signature</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1644,7 +1644,7 @@ Adresa:%4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Spots2 developers</source>
+        <source>The CryptographicAnomaly2 developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2182,8 +2182,8 @@ Adresa:%4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Spots2 version</source>
-        <translation>Spots2 verzija</translation>
+        <source>CryptographicAnomaly2 version</source>
+        <translation>CryptographicAnomaly2 verzija</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2192,8 +2192,8 @@ Adresa:%4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or spots2d</source>
-        <translation>Pošalji komandu usluzi -server ili spots2d</translation>
+        <source>Send command to -server or cryptographicanomaly2d</source>
+        <translation>Pošalji komandu usluzi -server ili cryptographicanomaly2d</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2212,13 +2212,13 @@ Adresa:%4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: spots2.conf)</source>
-        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: spots2.conf)</translation>
+        <source>Specify configuration file (default: cryptographicanomaly2.conf)</source>
+        <translation>Odredi konfiguracijsku datoteku (ugrađeni izbor: cryptographicanomaly2.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: spots2d.pid)</source>
-        <translation>Odredi proces ID datoteku (ugrađeni izbor: spots2.pid)</translation>
+        <source>Specify pid file (default: cryptographicanomaly2d.pid)</source>
+        <translation>Odredi proces ID datoteku (ugrađeni izbor: cryptographicanomaly2.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2295,13 +2295,13 @@ Adresa:%4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=spots2rpc
+rpcuser=cryptographicanomaly2rpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CryptographicAnomaly2 Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2317,7 +2317,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Spots2 is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. CryptographicAnomaly2 is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2362,8 +2362,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Spots2 will not work properly.</source>
-        <translation>Upozorenje: Molimo provjerite jesu li datum i vrijeme na vašem računalu točni. Ako vaš sat ide krivo, Spots2 neće raditi ispravno.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CryptographicAnomaly2 will not work properly.</source>
+        <translation>Upozorenje: Molimo provjerite jesu li datum i vrijeme na vašem računalu točni. Ako vaš sat ide krivo, CryptographicAnomaly2 neće raditi ispravno.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2612,8 +2612,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Spots2 Wiki for SSL setup instructions)</source>
-        <translation>SSL postavke: (za detalje o podešavanju SSL opcija vidi Spots2 Wiki)</translation>
+        <source>SSL options: (see the CryptographicAnomaly2 Wiki for SSL setup instructions)</source>
+        <translation>SSL postavke: (za detalje o podešavanju SSL opcija vidi CryptographicAnomaly2 Wiki)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2802,13 +2802,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Spots2</source>
-        <translation>Greška kod učitavanja wallet.dat: Novčanik zahtjeva noviju verziju Spots2a</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CryptographicAnomaly2</source>
+        <translation>Greška kod učitavanja wallet.dat: Novčanik zahtjeva noviju verziju CryptographicAnomaly2a</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Spots2 to complete</source>
-        <translation>Novčanik je trebao prepravak: ponovo pokrenite Spots2</translation>
+        <source>Wallet needed to be rewritten: restart CryptographicAnomaly2 to complete</source>
+        <translation>Novčanik je trebao prepravak: ponovo pokrenite CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2867,8 +2867,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Spots2 is probably already running.</source>
-        <translation>Program ne može koristiti %s na ovom računalu.  Spots2 program je vjerojatno već pokrenut.</translation>
+        <source>Unable to bind to %s on this computer. CryptographicAnomaly2 is probably already running.</source>
+        <translation>Program ne može koristiti %s na ovom računalu.  CryptographicAnomaly2 program je vjerojatno već pokrenut.</translation>
     </message>
     <message>
         <location line="+64"/>

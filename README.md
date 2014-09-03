@@ -1,46 +1,46 @@
-Spots2 integration/staging tree
-================================
+*** Work in Progress Code - Not Final Relase - Coins Generated Will Be Lost ***
 
-http://www.theSPT.com/
+#Cryptographic Anomaly - [CGA]  
 
-Copyright (c) 2009-2013 Bitcoin Developers
-Copyright (c) 2011-2013 Litecoin Developers
-Copyright (c) 2014 Spots2 Developers
+![Cryptographicanomaly](http://cganomaly.com/imgs/logo.png)
 
-What is Spots2?
-----------------
+The Elusive Coin  
+[CGAnomaly.com](CGAnomaly.com)  
 
-Spots2 (SPT) is a lite version of Bitcoin using scrypt-adaptive-N as a proof-of-work algorithm.
- - 70 second block targets
- - 48 coins per block
- - Retarget every block (Kimoto's gravity well)
+##What is Cryptographic Anomaly?
 
-For more information, as well as an immediately useable, binary version of
-the Spots2 client sofware, see http://www.theSPT.com/
+Cryptographic Anomaly is a modified clone of Litecoin, which is a lite version of Bitcoin using scrypt as a proof-of-work algorithm. 
 
+Cryptographic Anomaly is a crypto-coin that uses a unique block reward algorithm. The block reward is directly effected by the current difficulty. The algorithm uses a modulo operation to find the remainder of the previous block's difficulty divided by 100,000,000 (aka COIN). If the remainder is less than 25,000,000 then an Anomaly is born, making a bonus block that is worth 1 CGA for that block; otherwise the block reward is COIN minus the remainder (0.00-0.75 CGA.)
 
-License
--------
+At any given time the probability of 1 CGA coming into existence is, more or less, 25%.
 
-Spots2 is released under the terms of the MIT license. See `COPYING` for more
+-----------------------------------------------------------------------------------------------------
+
+##Specifications
+
+Algorithm: Scrypt
+Block Reward: 0.00-1.00 CGA
+Block Time: 60 seconds
+Maximum Money Supply: 
+Difficulty Retarget: KGW every block (after the 1st 100 blocks using standard retargeting.)
+P2P=3932
+RPC=P2P Port + 1
+
+##Suggested cryptographicanomaly2.conf for mining:
+
+	server=1
+ 	listen=1
+ 	rpcuser={insert username}
+ 	rpcpassword={insert password}
+ 	rpcport=3932
+	
+
+##License
+
+	Copyright (c) 2014 Cryptographic Anomaly Developers
+	Copyright (c) 2011-2014 Litecoin Developers
+	Copyright (c) 2009-2014 Bitcoin Developers
+
+Cryptographicanomaly is released under the terms of the MIT license. See `COPYING` for more
 information or see http://opensource.org/licenses/MIT.
-
-
-Ports / Important Details
--------------------------
-
- - RPCPORT=5587
- - P2PPORT=4588 (Note: Even though documented otherwise Spots has always been on port 4588 due to an error in the v1 code)
- - RPC Test Net = 15587
- - P2P Test Net = 15588
-
-Scrypt-N & Kimoto's Gravity Well Fork - June 1st, 2014 00:00:00 GMT
-
-Web Pages
----------
-Main Page - http://www.theSPT.com/
-Block Explorer - http://Explore.theSPT.com/
-Official Pool - http://Mine.theSPT.com/
-Paper Wallet - Coming Soon
-Forums - Comining Soon
-Spots Marketplace - Phase 2

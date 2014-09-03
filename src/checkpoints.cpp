@@ -36,21 +36,13 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
        (     0, uint256("0x6406c825fbe732e5208e567446733a838bbd40f7d93f0fd975164ea9259779a2"))
-       (    50, uint256("0x8a3199289af41ba6292d86c392f3f7e402fadea4fa909b34df4eb4cdd76d3a02"))
-       (   100, uint256("0x0d84502468c851ec66ad979d1b489990c44bb07fe64282dc4e15adafd55da0ea"))
-       (  1000, uint256("0xf867d93c0a11b1334f892293c4bc5c8428522238eb1ecc40c7c564abc21e5ac4"))
-       ( 10000, uint256("0x4b5b7f2522523f58fc6caef9ef7a00d4391e5580eda686cdff426a08b5c3ac62"))
-       ( 25000, uint256("0xb30c8a812c6464cec49ce5fdfe3dee027dca5affbe452dd1ca1b52cfa0db401f"))
-       ( 50000, uint256("0x2113e574393b6246dbb01618987159a11800504535f0666782e7198df7b18249"))
-       ( 75000, uint256("0x3389335ca9be07761947e50388ac074805ff134de639ba174987474208e38f64"))
-       ( 90000, uint256("0x7aed907e7113dfdee9c1c584b781ebc3789ff6c5aea41d753268dc9ecc680ed8"))
         ;
     static const CCheckpointData data = {
         &mapCheckpoints,
         1396944089, // * UNIX timestamp of last checkpoint block
-        158943,    // * total number of transactions between genesis and last checkpoint
+        1,    // * total number of transactions between genesis and last checkpoint
                     //   (the tx=... number in the SetBestChain debug.log lines)
-        1000,        // * estimated number of transactions per day after checkpoint
+        1440,        // * estimated number of transactions per day after checkpoint
     };
 
     static MapCheckpoints mapCheckpointsTestnet = 
@@ -73,9 +65,6 @@ namespace Checkpoints
 
     bool CheckBlock(int nHeight, const uint256& hash)
     {
-		//FIXME Spaincoin
-		return true;
-
         if (fTestNet) return true; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return true;
@@ -120,9 +109,6 @@ namespace Checkpoints
 
     int GetTotalBlocksEstimate()
     {
-		//FIXME Spaincoin
-		return 0;
-
         if (fTestNet) return 0; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return 0;
@@ -134,9 +120,6 @@ namespace Checkpoints
 
     CBlockIndex* GetLastCheckpoint(const std::map<uint256, CBlockIndex*>& mapBlockIndex)
     {
-		//FIXME Spaincoin
-		return NULL;
-
 		if (fTestNet) return NULL; // Testnet has no checkpoints
         if (!GetBoolArg("-checkpoints", true))
             return NULL;

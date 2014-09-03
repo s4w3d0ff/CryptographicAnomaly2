@@ -1112,7 +1112,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "Spots2 " + FormatFullVersion();
+        string strDesc = "CryptographicAnomaly2 " + FormatFullVersion();
 
         try {
             loop {
@@ -1192,12 +1192,12 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"ds.theSPT.com", "ds.theSPT.com"},
+    {"ds.theCGA.com", "ds.theCGA.com"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"dstest.theSPT.com", "dstest.theSPT.com"},
+    {"dstest.theCGA.com", "dstest.theCGA.com"},
     {NULL, NULL}
 };
 
@@ -1503,8 +1503,7 @@ void static StartSync(const vector<CNode*> &vNodes) {
         // check preconditions for allowing a sync
         if (!pnode->fClient && !pnode->fOneShot &&
             !pnode->fDisconnect && pnode->fSuccessfullyConnected &&
-            (pnode->nStartingHeight > (nBestHeight - 144)) &&
-            (pnode->nVersion < NOBLKS_VERSION_START || pnode->nVersion >= NOBLKS_VERSION_END)) {
+            (pnode->nStartingHeight > (nBestHeight - 144))) {
             // if ok, compare node's score with the best so far
             double dScore = NodeSyncScore(pnode);
             if (pnodeNewSync == NULL || dScore > dBestScore) {
@@ -1672,7 +1671,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. Spots2 is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. CryptographicAnomaly2 is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());

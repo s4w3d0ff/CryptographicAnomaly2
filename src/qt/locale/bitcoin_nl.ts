@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Spots2</source>
-        <translation>Over Spots2</translation>
+        <source>About CryptographicAnomaly2</source>
+        <translation>Over CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Spots2&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Spots2&lt;/b&gt; versie</translation>
+        <source>&lt;b&gt;CryptographicAnomaly2&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;CryptographicAnomaly2&lt;/b&gt; versie</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+0"/>
-        <source>The Spots2 developers</source>
-        <translation>De Spots2-ontwikkelaars</translation>
+        <source>The CryptographicAnomaly2 developers</source>
+        <translation>De CryptographicAnomaly2-ontwikkelaars</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Spots2 addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dit zijn uw Spots2adressen om betalingen mee te ontvangen. U kunt er voor kiezen om een uniek adres aan te maken voor elke afzender. Op deze manier kunt u bijhouden wie al aan u betaald heeft.</translation>
+        <source>These are your CryptographicAnomaly2 addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dit zijn uw CryptographicAnomaly2adressen om betalingen mee te ontvangen. U kunt er voor kiezen om een uniek adres aan te maken voor elke afzender. Op deze manier kunt u bijhouden wie al aan u betaald heeft.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Spots2 address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Spots2adres bezit</translation>
+        <source>Sign a message to prove you own a CryptographicAnomaly2 address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald CryptographicAnomaly2adres bezit</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Spots2 address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Spots2adres het bericht heeft ondertekend.</translation>
+        <source>Verify a message to ensure it was signed with a specified CryptographicAnomaly2 address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde CryptographicAnomaly2adres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Spots2 addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Spots2adressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw spots2s verzendt.</translation>
+        <source>These are your CryptographicAnomaly2 addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw CryptographicAnomaly2adressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw cryptographicanomaly2s verzendt.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SPOTS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW SPOTS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CGA&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW CGA VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-56"/>
-        <source>Spots2 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your spots2s from being stolen by malware infecting your computer.</source>
-        <translation>Spots2 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw spots2s stelen.</translation>
+        <source>CryptographicAnomaly2 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cryptographicanomaly2s from being stolen by malware infecting your computer.</source>
+        <translation>CryptographicAnomaly2 zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw cryptographicanomaly2s stelen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Spots2</source>
-        <translation>Laat informatie zien over Spots2</translation>
+        <source>Show information about CryptographicAnomaly2</source>
+        <translation>Laat informatie zien over CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Spots2 address</source>
-        <translation>Verstuur munten naar een Spots2adres</translation>
+        <source>Send coins to a CryptographicAnomaly2 address</source>
+        <translation>Verstuur munten naar een CryptographicAnomaly2adres</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Spots2</source>
-        <translation>Wijzig instellingen van Spots2</translation>
+        <source>Modify configuration options for CryptographicAnomaly2</source>
+        <translation>Wijzig instellingen van CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Spots2</source>
-        <translation>Spots2</translation>
+        <source>CryptographicAnomaly2</source>
+        <translation>CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Spots2</source>
-        <translation>&amp;Over Spots2</translation>
+        <source>&amp;About CryptographicAnomaly2</source>
+        <translation>&amp;Over CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Spots2 addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Spots2adressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your CryptographicAnomaly2 addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw CryptographicAnomaly2adressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Spots2 addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Spots2adressen</translation>
+        <source>Verify messages to ensure they were signed with specified CryptographicAnomaly2 addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde CryptographicAnomaly2adressen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+47"/>
-        <source>Spots2 client</source>
-        <translation>Spots2 client</translation>
+        <source>CryptographicAnomaly2 client</source>
+        <translation>CryptographicAnomaly2 client</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Spots2 network</source>
-        <translation><numerusform>%n actieve connectie naar Spots2netwerk</numerusform><numerusform>%n actieve connecties naar Spots2netwerk</numerusform></translation>
+        <source>%n active connection(s) to CryptographicAnomaly2 network</source>
+        <translation><numerusform>%n actieve connectie naar CryptographicAnomaly2netwerk</numerusform><numerusform>%n actieve connecties naar CryptographicAnomaly2netwerk</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -607,7 +607,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>Deze transactie overschrijdt de groottelimiet. Om de transactie alsnog te versturen kunt u transactiekosten betalen van %1. Deze transactiekosten gaan naar de nodes die uw transactie verwerken en het helpt op deze manier bij het ondersteunen van het Spots2netwerk. Wilt u de transactiekosten betalen?</translation>
+        <translation>Deze transactie overschrijdt de groottelimiet. Om de transactie alsnog te versturen kunt u transactiekosten betalen van %1. Deze transactiekosten gaan naar de nodes die uw transactie verwerken en het helpt op deze manier bij het ondersteunen van het CryptographicAnomaly2netwerk. Wilt u de transactiekosten betalen?</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -656,8 +656,8 @@ Adres: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Spots2 address or malformed URI parameters.</source>
-        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig Spots2adres of misvormde URI-parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid CryptographicAnomaly2 address or malformed URI parameters.</source>
+        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig CryptographicAnomaly2adres of misvormde URI-parameters.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Spots2 can no longer continue safely and will quit.</source>
-        <translation>Er is een fatale fout opgetreden. Spots2 kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
+        <source>A fatal error occurred. CryptographicAnomaly2 can no longer continue safely and will quit.</source>
+        <translation>Er is een fatale fout opgetreden. CryptographicAnomaly2 kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Spots2 address.</source>
-        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig Spots2adres</translation>
+        <source>The entered address &quot;%1&quot; is not a valid CryptographicAnomaly2 address.</source>
+        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig CryptographicAnomaly2adres</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adres: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Spots2-Qt</source>
-        <translation>Spots2-Qt</translation>
+        <source>CryptographicAnomaly2-Qt</source>
+        <translation>CryptographicAnomaly2-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Spots2 after logging in to the system.</source>
-        <translation>Start Spots2 automatisch na inloggen in het systeem</translation>
+        <source>Automatically start CryptographicAnomaly2 after logging in to the system.</source>
+        <translation>Start CryptographicAnomaly2 automatisch na inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Spots2 on system login</source>
-        <translation>Start &amp;Spots2 bij het inloggen in het systeem</translation>
+        <source>&amp;Start CryptographicAnomaly2 on system login</source>
+        <translation>Start &amp;CryptographicAnomaly2 bij het inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,8 +844,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Spots2 client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de Spots2-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the CryptographicAnomaly2 client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de CryptographicAnomaly2-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Spots2 network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Verbind met het Spots2-netwerk via een SOCKS-proxy (bijv. wanneer u via Tor wilt verbinden)</translation>
+        <source>Connect to the CryptographicAnomaly2 network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Verbind met het CryptographicAnomaly2-netwerk via een SOCKS-proxy (bijv. wanneer u via Tor wilt verbinden)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Spots2.</source>
-        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat Spots2 herstart wordt.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting CryptographicAnomaly2.</source>
+        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat CryptographicAnomaly2 herstart wordt.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -944,8 +944,8 @@ Adres: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Spots2 addresses in the transaction list or not.</source>
-        <translation>Of Spots2adressen getoond worden in de transactielijst</translation>
+        <source>Whether to show CryptographicAnomaly2 addresses in the transaction list or not.</source>
+        <translation>Of CryptographicAnomaly2adressen getoond worden in de transactielijst</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adres: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Spots2.</source>
-        <translation>Deze instelling zal pas van kracht worden na het herstarten van Spots2.</translation>
+        <source>This setting will take effect after restarting CryptographicAnomaly2.</source>
+        <translation>Deze instelling zal pas van kracht worden na het herstarten van CryptographicAnomaly2.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Spots2 network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automaticsh met het Spots2netwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the CryptographicAnomaly2 network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automaticsh met het CryptographicAnomaly2netwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1069,8 +1069,8 @@ Adres: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start spots2: click-to-pay handler</source>
-        <translation>Kan spots2 niet starten: click-to-pay handler</translation>
+        <source>Cannot start cryptographicanomaly2: click-to-pay handler</source>
+        <translation>Kan cryptographicanomaly2 niet starten: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Spots2-Qt help message to get a list with possible Spots2 command-line options.</source>
-        <translation>Toon het Spots2Qt-hulpbericht voor een lijst met mogelijke Spots2 commandoregel-opties.</translation>
+        <source>Show the CryptographicAnomaly2-Qt help message to get a list with possible CryptographicAnomaly2 command-line options.</source>
+        <translation>Toon het CryptographicAnomaly2Qt-hulpbericht voor een lijst met mogelijke CryptographicAnomaly2 commandoregel-opties.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adres: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Spots2 - Debug window</source>
-        <translation>Spots2-debugscherm</translation>
+        <source>CryptographicAnomaly2 - Debug window</source>
+        <translation>CryptographicAnomaly2-debugscherm</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Spots2 Core</source>
-        <translation>Spots2 Kern</translation>
+        <source>CryptographicAnomaly2 Core</source>
+        <translation>CryptographicAnomaly2 Kern</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Spots2 debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het Spots2debug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
+        <source>Open the CryptographicAnomaly2 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het CryptographicAnomaly2debug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Spots2 RPC console.</source>
-        <translation>Welkom bij de Spots2 RPC-console.</translation>
+        <source>Welcome to the CryptographicAnomaly2 RPC console.</source>
+        <translation>Welkom bij de CryptographicAnomaly2 RPC-console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1448,8 +1448,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Spots2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Vul een Spots2adres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a CryptographicAnomaly2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Vul een CryptographicAnomaly2adres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Spots2 address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Spots2adres bezit</translation>
+        <source>Sign the message to prove you own this CryptographicAnomaly2 address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald CryptographicAnomaly2adres bezit</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adres: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Spots2 address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Spots2adres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified CryptographicAnomaly2 address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde CryptographicAnomaly2adres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adres: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Spots2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Vul een Spots2adres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a CryptographicAnomaly2 address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Vul een CryptographicAnomaly2adres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Spots2 signature</source>
-        <translation>Voer Spots2-handtekening in</translation>
+        <source>Enter CryptographicAnomaly2 signature</source>
+        <translation>Voer CryptographicAnomaly2-handtekening in</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,8 +1649,8 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Spots2 developers</source>
-        <translation>De Spots2-ontwikkelaars</translation>
+        <source>The CryptographicAnomaly2 developers</source>
+        <translation>De CryptographicAnomaly2-ontwikkelaars</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2187,8 +2187,8 @@ Adres: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Spots2 version</source>
-        <translation>Spots2versie</translation>
+        <source>CryptographicAnomaly2 version</source>
+        <translation>CryptographicAnomaly2versie</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adres: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or spots2d</source>
-        <translation>Stuur commando naar -server of spots2d</translation>
+        <source>Send command to -server or cryptographicanomaly2d</source>
+        <translation>Stuur commando naar -server of cryptographicanomaly2d</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,14 +2217,14 @@ Adres: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: spots2.conf)</source>
-        <translation>Specificeer configuratiebestand (standaard: spots2.conf)
+        <source>Specify configuration file (default: cryptographicanomaly2.conf)</source>
+        <translation>Specificeer configuratiebestand (standaard: cryptographicanomaly2.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: spots2d.pid)</source>
-        <translation>Specificeer pid-bestand (standaard: spots2d.pid)
+        <source>Specify pid file (default: cryptographicanomaly2d.pid)</source>
+        <translation>Specificeer pid-bestand (standaard: cryptographicanomaly2d.pid)
 </translation>
     </message>
     <message>
@@ -2302,23 +2302,23 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=spots2rpc
+rpcuser=cryptographicanomaly2rpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;CryptographicAnomaly2 Alert&quot; admin@foo.com
 </source>
         <translation>%s, u moet een RPC-wachtwoord instellen in het configuratiebestand: %s
 U wordt aangeraden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=spots2rpc
+rpcuser=cryptographicanomaly2rpc
 rpcpassword=%s
 (u hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en wachtwoord mogen niet hetzelfde zijn.
 Als het bestand niet bestaat, make hem dan aan met leesrechten voor enkel de eigenaar.
 Het is ook aan te bevelen &quot;alertnotify&quot; in te stellen zodat u op de hoogte gesteld wordt van problemen;
-for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.com</translation>
+for example: alertnotify=echo %%s | mail -s &quot;CryptographicAnomaly2 Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2332,8 +2332,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Spots2 is probably already running.</source>
-        <translation>Kan geen lock op de datamap %s verkrijgen. Spots2 draait vermoedelijk reeds.</translation>
+        <source>Cannot obtain a lock on data directory %s. CryptographicAnomaly2 is probably already running.</source>
+        <translation>Kan geen lock op de datamap %s verkrijgen. CryptographicAnomaly2 draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2377,8 +2377,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Spots2 will not work properly.</source>
-        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal Spots2 niet correct werken.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong CryptographicAnomaly2 will not work properly.</source>
+        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal CryptographicAnomaly2 niet correct werken.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2627,8 +2627,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Spots2 Wiki for SSL setup instructions)</source>
-        <translation>SSL-opties: (zie de Spots2 wiki voor SSL-instructies)</translation>
+        <source>SSL options: (see the CryptographicAnomaly2 Wiki for SSL setup instructions)</source>
+        <translation>SSL-opties: (zie de CryptographicAnomaly2 wiki voor SSL-instructies)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Spots2</source>
-        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van Spots2</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of CryptographicAnomaly2</source>
+        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van CryptographicAnomaly2</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Spots2 to complete</source>
-        <translation>Portemonnee moest herschreven worden: Herstart Spots2 om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart CryptographicAnomaly2 to complete</source>
+        <translation>Portemonnee moest herschreven worden: Herstart CryptographicAnomaly2 om te voltooien</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2882,8 +2882,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Spots2 Alert&quot; admin@foo.c
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Spots2 is probably already running.</source>
-        <translation>Niet in staat om aan %s te binden op deze computer. Spots2 draait vermoedelijk reeds.</translation>
+        <source>Unable to bind to %s on this computer. CryptographicAnomaly2 is probably already running.</source>
+        <translation>Niet in staat om aan %s te binden op deze computer. CryptographicAnomaly2 draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+64"/>
