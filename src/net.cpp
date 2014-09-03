@@ -1192,12 +1192,11 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"ds.theCGA.com", "ds.theCGA.com"},
+    {"cga.dnsseed.crypto2.net", "cga.dnsseed.crypto2.net"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"dstest.theCGA.com", "dstest.theCGA.com"},
     {NULL, NULL}
 };
 
@@ -1264,8 +1263,8 @@ void static ProcessOneShot()
 
 static const char * pnSeed[] =
 {
-	"107.170.140.109",
-	"192.99.37.224"
+	"192.99.37.224",
+	"107.170.166.51"
 };
 
 void AddSeedNodes() {

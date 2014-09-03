@@ -35,7 +35,7 @@ unsigned int nTransactionsUpdated = 0;
 
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x6406c825fbe732e5208e567446733a838bbd40f7d93f0fd975164ea9259779a2");
+uint256 hashGenesisBlock("0x5b955b9808b8701cd673b17edcf2f703c6d3b18e743e0d5bec31d82b0b4debfd");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // CryptographicAnomaly2: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -51,7 +51,7 @@ bool fReindex = false;
 bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
-const int64 nChainStartTimeNAdaptive = 1389306217; // Scrypt-N N-Factor start time
+//const int64 nChainStartTimeNAdaptive = 1389306217; // Scrypt-N N-Factor start time
 //const int64 nHardforkStartTime = 1401580800; // hardfork: switch to Scrypt-N/KGW - June 1st, 2014 00:00:00 GMT.
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
@@ -1113,12 +1113,14 @@ unsigned char GetNfactor(int64 nTimestamp) {
     */
 }
 
+/*
 int static generateMTRandom(unsigned int s, int range)
 {
 	random::mt19937 gen(s);
     random::uniform_int_distribution<> dist(1, range);
     return dist(gen);
 }
+*/
 
 int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
@@ -1126,9 +1128,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
         return nFees;
         
     if (nHeight == 1)
-        return 92000 * COIN; // Premine for coin swap
-    	
-    
+        return 95000 * COIN; // Premine for coin swap
+
     CBigNum nMod = CBigNum(prevHash) % CBigNum(COIN);
 
     int64 nSubsidy = 0;
@@ -1136,13 +1137,11 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
         nSubsidy = 1 * COIN;
     else
         nSubsidy = COIN - nMod.getint();
-
-    printf("nMod: %s nSubsidy: %"PRI64d"\n", nMod.ToString().c_str(), nSubsidy);
 			
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 3 * 60; // 3 minutes
+static const int64 nTargetTimespan = 2 * 60; // 2 minutes
 static const int64 nTargetSpacing = 60; // CryptographicAnomaly2: 60 seconds
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
@@ -1301,7 +1300,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 
 unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-        static const int64 BlocksTargetSpacing = 60; // 70 seconds
+        static const int64 BlocksTargetSpacing = 60; // 60 seconds
         static const unsigned int TimeDaySeconds = 60 * 60 * 24;
         int64 PastSecondsMin = TimeDaySeconds * 0.02; // 0.25 in megacoin, 0.01 in some others
         int64 PastSecondsMax = TimeDaySeconds * 0.14; // 7 days in megacoin, 0.14 in some others
@@ -1318,7 +1317,7 @@ unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const 
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    if (pindexLast->nHeight >= 100)
+    if (pindexLast != NULL && pindexLast->nHeight >= 100)
         return GetNextWorkRequired_V2(pindexLast, pblock); //kgw retarget
     else
         return GetNextWorkRequired_V1(pindexLast, pblock); //original retarget
@@ -2236,24 +2235,6 @@ bool CBlock::CheckBlock(CValidationState &state, bool fCheckPOW, bool fCheckMerk
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // CryptographicAnomaly2: Special short-term limits to avoid 10,000 BDB lock limit:
-    if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
-    {
-        // Rule is: #unique txids referenced <= 4,500
-        // ... to prevent 10,000 BDB lock exhaustion on old clients
-        set<uint256> setTxIn;
-        for (size_t i = 0; i < vtx.size(); i++)
-        {
-            setTxIn.insert(vtx[i].GetHash());
-            if (i == 0) continue; // skip coinbase txin
-            BOOST_FOREACH(const CTxIn& txin, vtx[i].vin)
-                setTxIn.insert(txin.prevout.hash);
-        }
-        size_t nTxids = setTxIn.size();
-        if (nTxids > 4500)
-            return error("CheckBlock() : 15 August maxlocks violation");
-    }
-
     // Check proof of work matches claimed amount
     if (fCheckPOW && !CheckProofOfWork(GetPoWHash(), nBits))
         return state.DoS(50, error("CheckBlock() : proof of work failed"));
@@ -2910,20 +2891,12 @@ bool InitBlockIndex() {
 
     // Only add the genesis block if not reindexing (in which case we reuse the one already on disk)
     if (!fReindex) {
-        // Genesis Block:
-        // CBlock(hash=12a765e31ffd4059bada, PoW=0000050c34a64b415b6b, ver=1, hashPrevBlock=00000000000000000000, hashMerkleRoot=97ddfbbae6, nTime=1317972665, nBits=1e0ffff0, nNonce=2084524493, vtx=1)
-        //   CTransaction(hash=97ddfbbae6, ver=1, vin.size=1, vout.size=1, nLockTime=0)
-        //     CTxIn(COutPoint(0000000000, -1), coinbase 04ffff001d0104404e592054696d65732030352f4f63742f32303131205374657665204a6f62732c204170706c65e280997320566973696f6e6172792c2044696573206174203536)
-        //     CTxOut(nValue=50.00000000, scriptPubKey=040184710fa689ad5023690c80f3a4)
-        //   vMerkleTree: 97ddfbbae6
-
         // Genesis block
-        const char* pszTimestamp = "Reborn as Spots - 07.21.2013";
+        const char* pszTimestamp = "CGA Reborn - 03-SEP-2014 - JTn1";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
-        txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
-	//printf("scriptsig size=%d\n", txNew.vin[0].scriptSig.size());    
+        txNew.vin[0].scriptSig = CScript() << 21011991 << CBigNum(33) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
 
         txNew.vout[0].nValue = 0;
         txNew.vout[0].scriptPubKey = CScript() << 0x0 << OP_CHECKSIG;
@@ -2933,9 +2906,9 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1374380318; //epochtime
-        block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 247526; 
+        block.nTime    = 1409776900;
+        block.nBits    = bnProofOfWorkLimit.GetCompact();
+        block.nNonce   = 1183234; 
 
         if (fTestNet)
         {
@@ -2948,12 +2921,11 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
-	printf("min nBit:  %08x\n", bnProofOfWorkLimit.GetCompact());
-	fflush(stdout);
-	assert(block.hashMerkleRoot == uint256("0x8ecb02086beb1a967e7ff728c44404b5ae2ca4a06ddfd7f450e06e76678fc288"));
+        fflush(stdout);
+        assert(block.hashMerkleRoot == uint256("0xb572fb23c722296a57be5e14d2edb156e9a462169c5c2b485dc08d66861b24a3"));
 
-	block.print();
-	assert(hash == hashGenesisBlock);
+        block.print();
+        assert(hash == hashGenesisBlock);
 
         // Start new block file
         try {
