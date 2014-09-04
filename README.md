@@ -24,7 +24,7 @@ Block Reward: 0.00-1.00 CGA<br />
 Block Time: 2 minutes<br />
 Maximum Money Supply: 10,000,000,000 (will take hundreds/thousands of years to reach)<br />
 Difficulty Retarget: KGW every block (after the 1st 100 blocks using standard retargeting.)<br />
-P2P=3932<br />
+P2P=3933<br />
 RPC=P2P Port + 1
 
 ##Suggested cryptographicanomaly2.conf for mining:
@@ -33,7 +33,7 @@ RPC=P2P Port + 1
  	listen=1
  	rpcuser={insert username}
  	rpcpassword={insert password}
- 	rpcport=3933
+ 	rpcport=3934
 	
 
 ##License

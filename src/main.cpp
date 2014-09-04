@@ -3196,7 +3196,7 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0x4d, 0x43, 0x41, 0x44 }; // CryptographicAnomaly2
+unsigned char pchMessageStart[4] = { 0x4d, 0x63, 0x61, 0x44 }; // CryptographicAnomaly2
 
 
 void static ProcessGetData(CNode* pfrom)
