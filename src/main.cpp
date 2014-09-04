@@ -1124,7 +1124,7 @@ int static generateMTRandom(unsigned int s, int range)
 
 int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
 {
-    if (nHeight <= 0 || prevHash <= 0)
+    if (nHeight <= 0 || prevHash == 0)
         return nFees;
         
     if (nHeight == 1)
@@ -1141,8 +1141,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 2 * 60; // 2 minutes
-static const int64 nTargetSpacing = 60; // CryptographicAnomaly2: 60 seconds
+static const int64 nTargetTimespan = 4 * 60; // 4 minutes
+static const int64 nTargetSpacing = 2 * 60; // 2 minute block target
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
@@ -1258,7 +1258,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
         
     if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || (uint64)BlockLastSolved->nHeight < PastBlocksMin) { return bnProofOfWorkLimit.GetCompact(); }
         
-	int64 LatestBlockTime = BlockLastSolved->GetBlockTime();
+        int64 LatestBlockTime = BlockLastSolved->GetBlockTime();
         for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++) {
                 if (PastBlocksMax > 0 && i > PastBlocksMax) { break; }
                 PastBlocksMass++;
@@ -1300,7 +1300,7 @@ unsigned int static KimotoGravityWell(const CBlockIndex* pindexLast, const CBloc
 
 unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-        static const int64 BlocksTargetSpacing = 60; // 60 seconds
+        static const int64 BlocksTargetSpacing = nTargetSpacing;
         static const unsigned int TimeDaySeconds = 60 * 60 * 24;
         int64 PastSecondsMin = TimeDaySeconds * 0.02; // 0.25 in megacoin, 0.01 in some others
         int64 PastSecondsMax = TimeDaySeconds * 0.14; // 7 days in megacoin, 0.14 in some others
@@ -1317,7 +1317,7 @@ unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const 
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-    if (pindexLast != NULL && pindexLast->nHeight >= 100)
+    if (pindexLast != NULL && pindexLast->nHeight >= 50)
         return GetNextWorkRequired_V2(pindexLast, pblock); //kgw retarget
     else
         return GetNextWorkRequired_V1(pindexLast, pblock); //original retarget

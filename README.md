@@ -21,7 +21,7 @@ At any given time the probability of a 1 CGA block coming into existence is, mor
 
 Algorithm: Scrypt<br />
 Block Reward: 0.00-1.00 CGA<br />
-Block Time: 60 seconds<br />
+Block Time: 2 minutes<br />
 Maximum Money Supply: 10,000,000,000 (will take hundreds/thousands of years to reach)<br />
 Difficulty Retarget: KGW every block (after the 1st 100 blocks using standard retargeting.)<br />
 P2P=3932<br />
@@ -33,7 +33,7 @@ RPC=P2P Port + 1
  	listen=1
  	rpcuser={insert username}
  	rpcpassword={insert password}
- 	rpcport=3932
+ 	rpcport=3933
 	
 
 ##License
