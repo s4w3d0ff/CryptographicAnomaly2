@@ -1,5 +1,3 @@
-*** Work in Progress Code - Not Final Relase - Coins Generated Will Be Lost ***
-
 #Cryptographic Anomaly - [CGA]  
 
 ![Cryptographicanomaly](http://cganomaly.com/imgs/logo.png)
