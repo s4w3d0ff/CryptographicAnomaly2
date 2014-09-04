@@ -1128,7 +1128,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
         return nFees;
         
     if (nHeight == 1)
-        return 95000 * COIN; // Premine for coin swap
+        return 105000 * COIN; // Premine for coin swap
 
     CBigNum nMod = CBigNum(prevHash) % CBigNum(COIN);
 
