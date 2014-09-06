@@ -13,6 +13,11 @@
 #include <QAbstractItemDelegate>
 #include <QPainter>
 
+#ifdef _WIN32
+#include <Shellapi.h>
+#include <Objbase.h>
+#endif
+
 #define DECORATION_SIZE 64
 #define NUM_ITEMS 5
 
@@ -111,6 +116,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     ui->listTransactions->setAttribute(Qt::WA_MacShowFocusRect, false);
 
     connect(ui->listTransactions, SIGNAL(clicked(QModelIndex)), this, SLOT(handleTransactionClicked(QModelIndex)));
+    connect(ui->clientBy, SIGNAL(pressed()), this, SLOT(handleClientBy()));
 
     // init "out of sync" warning labels
     ui->labelWalletStatus->setText("(" + tr("out of sync") + ")");
@@ -118,6 +124,16 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
+}
+
+void OverviewPage::handleClientBy()
+{
+	ui->clientBy->setDown(false);
+#ifdef _WIN32
+	CoInitializeEx(NULL, COINIT_APARTMENTTHREADED | COINIT_DISABLE_OLE1DDE);
+	ShellExecuteA(NULL, "open", "https://bitcointalk.org/index.php?topic=588310.0", NULL, NULL, SW_SHOWNORMAL);
+	CoUninitialize();
+#endif
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)

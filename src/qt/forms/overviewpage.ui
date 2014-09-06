@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>573</width>
-    <height>403</height>
+    <height>405</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -202,7 +202,7 @@
          </property>
         </spacer>
        </item>
-       <item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignBottom">
         <widget class="QLabel" name="label_2">
          <property name="minimumSize">
           <size>
@@ -220,7 +220,7 @@
           <bool>false</bool>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignBottom|Qt::AlignHCenter</set>
          </property>
         </widget>
        </item>
@@ -311,6 +311,26 @@
           </size>
          </property>
         </spacer>
+       </item>
+       <item alignment="Qt::AlignRight|Qt::AlignBottom">
+        <widget class="QPushButton" name="clientBy">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="../bitcoin.qrc">
+           <normaloff>:/icons/clientby</normaloff>:/icons/clientby</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>64</width>
+           <height>72</height>
+          </size>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
