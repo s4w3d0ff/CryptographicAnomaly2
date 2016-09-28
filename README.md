@@ -1,9 +1,6 @@
 #Cryptographic Anomaly - [CGA]  
 
-![Cryptographicanomaly](http://cganomaly.com/imgs/logo.png)
-
 The Elusive Coin  
-[CGAnomaly.com](CGAnomaly.com)  
 
 ##What is Cryptographic Anomaly?
 
