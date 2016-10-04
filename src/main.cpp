@@ -1137,8 +1137,8 @@ int64 static GetBlockValue(int nHeight, int64 nFees, uint256 prevHash)
         nSubsidy = 1 * COIN;
     else
         nSubsidy = COIN - nMod.getint();
-	if (nHeight >= 500000)
-		nSubsidy = 0
+    if (nHeight >= 500000)
+        nSubsidy = 0;
     return nSubsidy + nFees;
 }
 
