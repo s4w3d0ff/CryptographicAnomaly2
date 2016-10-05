@@ -1263,9 +1263,10 @@ void static ProcessOneShot()
 
 static const char * pnSeed[] =
 {
-	"192.99.37.224",
-	"107.170.166.51",
-	"80.82.69.135"
+	"192.99.37.224", // ??
+	"107.170.166.51", // ??
+	"80.82.69.135", // s4w3d0ff.host
+	"52.211.157.41" // Expires: October 4, 2017
 };
 
 void AddSeedNodes() {
